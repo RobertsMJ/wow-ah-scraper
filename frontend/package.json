@@ -1,0 +1,17 @@
+{
+  "name": "Dota-Viewer-UI",
+  "version": "0.0.1",
+  "description": "Running in a container",
+  "author": "<robertsmj1138@gmail.com>",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}

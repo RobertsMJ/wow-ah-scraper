@@ -1,0 +1,17 @@
+apiVersion: skaffold/v1
+kind: Config
+metadata:
+  name: dota-proj
+build:
+  artifacts:
+  - image: localhost:32000/frontend
+    context: frontend
+    sync:
+      infer:
+      - '**/*.js'
+
+deploy:
+  kubeContext: microk8s
+  kubectl:
+    manifests:
+    - k8s/**/*.yaml

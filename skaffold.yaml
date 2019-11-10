@@ -9,6 +9,7 @@ build:
     sync:
       infer:
       - '**/*.js'
+      - '**/*.vue'
 
 deploy:
   kubeContext: microk8s

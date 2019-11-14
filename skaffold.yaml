@@ -1,7 +1,7 @@
 apiVersion: skaffold/v1
 kind: Config
 metadata:
-  name: dota-proj
+  name: wow-ah-scraper
 build:
   artifacts:
   - image: localhost:32000/frontend

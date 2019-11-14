@@ -1,7 +1,7 @@
-# dota-project
-Basic dota 2 replay parser
+# wow-ah-scraper
+Scrapes the AH on US-Illidan to track alchemy prices
 
-`cd dota-project`
+`cd wow-ah-scraper`
 
 `skaffold dev`
 

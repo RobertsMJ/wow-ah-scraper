@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend
+  name: ui
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: frontend
+      app: ui
   template:
     metadata:
       labels:
-        app: frontend
+        app: ui
     spec:
       containers:
-        - image: localhost:32000/frontend
-          name: frontend
+        - image: localhost:32000/ui
+          name: ui
           ports:
             - containerPort: 8080

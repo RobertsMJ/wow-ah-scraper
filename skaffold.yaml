@@ -4,8 +4,8 @@ metadata:
   name: wow-ah-scraper
 build:
   artifacts:
-  - image: localhost:32000/frontend
-    context: frontend
+  - image: localhost:32000/ui
+    context: ui
     sync:
       infer:
       - '**/*.js'

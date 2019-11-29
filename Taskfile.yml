@@ -4,6 +4,7 @@ version: '2'
 
 vars:
   GREETING: Hello, World!
+  GO_VERSION: 1.13.4
 
 tasks:
   default:
@@ -12,6 +13,13 @@ tasks:
     silent: true
   install-skaffold:
     cmds:
-      - curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/latest/skaffold-linux-amd64 &&
-        chmod +x skaffold &&
-        sudo mv skaffold /usr/local/bin
+      - curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/latest/skaffold-linux-amd64
+      - chmod +x skaffold
+      - sudo mv skaffold /usr/local/bin
+      - skaffold version
+  install-go:
+    cmds:
+      - wget https://dl.google.com/go/go{{.GO_VERSION}}.linux-amd64.tar.gz
+      - sudo tar -C /usr/local -xzf go{{.GO_VERSION}}.linux-amd64.tar.gz
+      - rm go{{.GO_VERSION}}.linux-amd64.tar.gz
+      - go version

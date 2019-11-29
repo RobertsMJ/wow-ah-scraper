@@ -11,3 +11,7 @@ spec:
         backend:
           serviceName: ui
           servicePort: 8080
+      - path: /api
+        backend:
+          serviceName: api
+          servicePort: 8080
